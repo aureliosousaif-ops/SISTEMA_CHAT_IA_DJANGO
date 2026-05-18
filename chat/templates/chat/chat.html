@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Horário Atendimento Virtual</title>
+
+    <!-- Arquivos estáticos -->
+    {% load static %}
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="{% static 'chat/css/style.css' %}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Título -->
+        <h1>🤖 Horário Atendimento Automatizado</h1>
+
+        <!-- Caixa do chat -->
+        <div class="chat-box">
+
+            <!-- Percorre mensagens -->
+            {% for message in messages %}
+
+                <!-- Mensagem usuário -->
+                <div class="user-message">
+
+                    {{ message.user_message }}
+
+                </div>
+
+                <!-- Resposta IA -->
+                <div class="ai-message">
+
+                    {{ message.ai_response }}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        <!-- Formulário -->
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <!-- Campo texto -->
+            <input
+                type="text"
+                name="message"
+                placeholder="Digite sua dúvida..."
+                required
+            >
+
+            <!-- Botão -->
+            <button type="submit">
+
+                Enviar
+
+            </button>
+
+        </form>
+
+    </div>
+<script>
+
+    // Seleciona caixa chat
+    const chatBox = document.querySelector('.chat-box');
+
+    // Faz scroll automático
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+</script>
+</body>
+
+</html>

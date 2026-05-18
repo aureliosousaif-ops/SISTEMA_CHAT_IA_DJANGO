@@ -1,0 +1,161 @@
+/* Corpo da página */
+body{
+    background: #42a738;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container{
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* Caixa do chat */
+.chat-box{
+    background: #ced3db;
+    border-radius: 15px;
+    padding: 20px;
+    height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+
+/* Título */
+h1{
+    color: white;
+    text-align: center;
+}
+
+/* Mensagem usuário */
+.user-message{
+    background: #2563eb;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px 0;
+    width: fit-content;
+    max-width: 70%;
+    margin-left: auto;
+}
+
+/* Mensagem IA */
+.ai-message{
+    background: #334155;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px 0;
+    width: fit-content;
+    max-width: 70%;
+}
+
+/* Formulário */
+form{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Campo input */
+input{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Botão */
+button{
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover botão */
+button:hover{
+    background: #1d4ed8;
+}
+
+/* Scroll personalizado */
+.chat-box::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* Fundo scrollbar */
+.chat-box::-webkit-scrollbar-track{
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+/* Barra scroll */
+.chat-box::-webkit-scrollbar-thumb{
+    background: #475569;
+    border-radius: 10px;
+}
+
+/* Hover scroll */
+.chat-box::-webkit-scrollbar-thumb:hover{
+    background: #64748b;
+}
+
+
+/* Animação mensagens */
+.user-message,
+.ai-message{
+
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+
+/* Efeito aparecer */
+@keyframes fadeIn{
+
+    from{
+
+        opacity: 0;
+        transform: translateY(10px);
+
+    }
+
+    to{
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Efeito foco input */
+input:focus{
+
+    box-shadow: 0px 0px 10px rgba(37,99,235,0.5);
+
+}
+
+
+/* Transição botão */
+button{
+
+    transition: 0.2s;
+
+}
+
+
+/* Hover botão */
+button:hover{
+
+    transform: scale(1.03);
+
+}
