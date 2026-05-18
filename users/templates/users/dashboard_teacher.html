@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Dashboard Professor</title>
+
+    {% load static %}
+
+    <link
+        rel="stylesheet"
+        href="{% static 'users/css/style.css' %}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>
+
+                👨‍🏫 Professor
+
+            </h1>
+
+            <p>
+
+                Bem-vindo,
+                {{ teacher_name }}
+
+            </p>
+
+            <a
+                href="/admin/"
+                class="button"
+            >
+
+                Painel Admin
+
+            </a>
+
+            <a
+                href="/logout/"
+                class="button"
+            >
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

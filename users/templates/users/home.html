@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Sistema Inteligente de Atendimento Escolar</title>
+
+    {% load static %}
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="{% static 'users/css/style.css' %}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🤖 Login</h1>
+
+            <p>
+                Sistema Inteligente de Atendimento Escolar
+            </p>
+
+            <!-- Login aluno -->
+            <a
+                href="/login/aluno/"
+                class="button"
+            >
+
+                Sou Aluno
+
+            </a>
+
+            <!-- Login professor -->
+            <a
+                href="/login/professor/"
+                class="button"
+            >
+
+                Sou Professor
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

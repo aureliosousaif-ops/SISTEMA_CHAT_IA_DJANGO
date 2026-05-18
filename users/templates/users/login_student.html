@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Login Aluno</title>
+
+    {% load static %}
+
+    <link
+        rel="stylesheet"
+        href="{% static 'users/css/style.css' %}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🎓 Login Aluno</h1>
+
+            <p>
+                Entre com seus dados escolares
+            </p>
+
+            <!-- Mensagem erro -->
+            {% if error %}
+
+                <p style="color:red;">
+
+                    {{ error }}
+
+                </p>
+
+            {% endif %}
+
+            <!-- Formulário -->
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <!-- Matrícula -->
+                <input
+                    type="text"
+                    name="registration"
+                    placeholder="Número matrícula"
+                    required
+                >
+
+                <br><br>
+
+                <!-- Nascimento -->
+                <input
+                    type="date"
+                    name="birth_date"
+                    required
+                >
+
+                <br><br>
+
+                <!-- Botão -->
+                <button type="submit">
+
+                    Entrar
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
